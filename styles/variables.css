@@ -1,1 +1,26 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+	--inter: 'Inter-Variable';
+	--pressStart2P: 'PressStart2P-Regular';
+	--title-weight: 700;
+  --title-font-size: 18px;
+	--text-weight: 400;
+  --color: #000;
+  --background-image: url('../images/background.png');
+  --background-color: #fff;
+  --stroke-color: #fff;
+  --button-text-color: #fff;
+	
+	
+  --title-color: #DB00FF;
+  --bg-color: #000028;
+  --accent-bg-color: #ff0070;
+  --accent-color: 255, 0, 112;
+  --accent-text-color: #000028;
+  --text-color: #f1b2ce;
+  --font-family: 'IBM Plex mono';
+  --font-size: 18px;
+  --font-weight: 700;
+  --coner-image: url('../images/cover-image-dark.png');
+}
