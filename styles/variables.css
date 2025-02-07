@@ -11,6 +11,11 @@
   --background-color: #fff;
   --stroke-color: #fff;
   --button-text-color: #fff;
+  --heart-contour: #000;
+  --heart-main-body: transparent;
+  --heart-core: transparent;
+  --heart-sparks: #ff0000;
+
 	
 	
   --title-color: #DB00FF;
