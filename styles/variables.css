@@ -4,7 +4,8 @@
 	--inter: 'Inter-Variable';
 	--pressStart2P: 'PressStart2P-Regular';
 	--title-weight: 700;
-  --title-font-size: 18px;
+  --font-size: 18px;
+  --button-font-size: 14px;
 	--text-weight: 400;
   --content-size: 375px, 100%, 700px;
   --color: #000;
@@ -16,17 +17,4 @@
   --heart-main-body: transparent;
   --heart-core: transparent;
   --heart-sparks: #ff0000;
-
-	
-	
-  --title-color: #DB00FF;
-  --bg-color: #000028;
-  --accent-bg-color: #ff0070;
-  --accent-color: 255, 0, 112;
-  --accent-text-color: #000028;
-  --text-color: #f1b2ce;
-  --font-family: 'IBM Plex mono';
-  --font-size: 18px;
-  --font-weight: 700;
-  --coner-image: url('../images/cover-image-dark.png');
 }
