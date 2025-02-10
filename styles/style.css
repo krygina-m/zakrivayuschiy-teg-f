@@ -19,7 +19,6 @@
   }
 }
 
-
 @keyframes sparks {
   from {
     opacity: 0;
@@ -51,7 +50,7 @@
 }
 
 .header {
-  font-family: var(--pressStart2P), sans-serif; 
+  font-family: var(--pressStart2P), sans-serif;
   font-weight: var(--text-weight);
   text-transform: uppercase;
   display: flex;
@@ -157,7 +156,7 @@
 
 @supports(text-stroke: 1px var(--stroke-color)) or (--webkit-text-stroke: 1px var(--stroke-color)) {
   .card_label {
-    -webkit-text-stroke: 1px var(--stroke-color); 
+    -webkit-text-stroke: 1px var(--stroke-color);
     text-stroke: 1px var(--stroke-color); 
     text-shadow: none;
   }
