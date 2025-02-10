@@ -229,6 +229,7 @@
   transition: outline 0.3s ease;
   align-self: center;
   padding-inline: 0;
+  outline: 2px solid transparent;
 }
 
 .card__icon-button:focus {
