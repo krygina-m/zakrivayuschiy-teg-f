@@ -29,12 +29,11 @@
   }
 }
 
-
 .page {
  /* min-inline-size: 320px;*/
   min-block-size: 100dvb;
   font-family: var(--inter), sans-serif;
-  font-variation-settings: 'wght' 400;  
+  font-variation-settings: 'wght' 400;
   font-size: var(--font-size);
   /*background-image: var(--background-image);*/
   background-size: cover;
@@ -159,7 +158,7 @@
     0 1px var(--stroke-color), 
     1px 0 var(--stroke-color), 
     0 -1px var(--stroke-color);
-    -webkit-text-stroke: 1px var(--stroke-color); 
+    -webkit-text-stroke: 1px var(--stroke-color);
   mix-blend-mode: hard-light;
   opacity: 0.5;
   z-index: 1;
@@ -168,7 +167,7 @@
 @supports(text-stroke: 1px var(--stroke-color)) or (--webkit-text-stroke: 1px var(--stroke-color)) {
   .card_label {
     -webkit-text-stroke: 1px var(--stroke-color);
-    text-stroke: 1px var(--stroke-color); 
+    text-stroke: 1px var(--stroke-color);
     text-shadow: none;
   }
 } 
