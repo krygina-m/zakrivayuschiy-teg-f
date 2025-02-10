@@ -6,6 +6,7 @@
 	--title-weight: 700;
   --title-font-size: 18px;
 	--text-weight: 400;
+  --content-size: 375px, 100%, 700px;
   --color: #000;
   --background-image: url('../images/background.png');
   --background-color: #fff;
