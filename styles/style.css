@@ -9,39 +9,20 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-@keyframes scale {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.25);
-  }
-}
-
-@keyframes sparks {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .page {
- /* min-inline-size: 320px;*/
+  /* min-inline-size: 320px;*/
   min-block-size: 100dvb;
-  font-family: var(--inter), sans-serif;
-  font-variation-settings: 'wght' 400;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--text-weight);
   font-size: var(--font-size);
   /*background-image: var(--background-image);*/
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
-                    repeating-linear-gradient( to right, #d3d3d3 0 2px, transparent 2px 4px),
-                    linear-gradient(#e7e7e7, #1a1a1a);
+  background-image: repeating-linear-gradient(#d3d3d3 0 2px,
+      transparent 2px 4px),
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7, #1a1a1a);
   max-inline-size: 700px;
   margin: auto;
   display: flex;
@@ -50,7 +31,7 @@
 }
 
 .header {
-  font-family: var(--pressStart2P), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-weight: var(--text-weight);
   text-transform: uppercase;
   display: flex;
@@ -59,13 +40,14 @@
   flex-direction: column;
   outline: 2px solid var(--color);
   background-color: var(--background-color);
-  min-height: 368px;
+  /*min-height: 368px;*/
+  padding-block: 128px;
   margin-block: 100px;
 }
 
 .header_size {
   width: clamp(var(--content-size));
- /*width: max(50%, 700px);*/
+  /*width: max(50%, 700px);*/
 }
 
 .header_title {
@@ -82,6 +64,7 @@
   display: grid;
   row-gap: 50px;
   margin-block-end: 50px;
+  justify-items: center;
 }
 
 .article {
@@ -89,13 +72,9 @@
   width: clamp(var(--content-size));
 }
 
-/*.article:not(:last-of-type) {
-  margin-block-end: 50px;
-}*/
-
 .article_title {
   padding: 5px 10px;
-  font-variation-settings: 'wgt' var(--title-weight);
+  font-variation-settings: "wght" var(--title-weight);
   font-size: var(--title-font-size);
   color: var(--color);
   background-color: var(--background-color);
@@ -103,6 +82,7 @@
 
 .article_image_box {
   position: relative;
+  margin: 0;
 }
 
 .article_image {
@@ -110,6 +90,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .filter_brightness {
@@ -134,11 +115,11 @@
 
 .filter_invert {
   filter: invert(0.7);
-} 
+}
 
 .filter_drop_shadow {
   filter: drop-shadow(5px 10px 5px rgba(54, 11, 110, 0.7));
-} 
+}
 
 .filter_multi {
   filter: invert(0.7) contrast(2) brightness(70%);
@@ -149,28 +130,25 @@
   top: 25px;
   right: 25px;
   /*text-transform: uppercase;*/
-  font-family: var(--pressStart2P), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-weight: var(--text-weight);
   font-size: 14px;
   background-blend-mode: hard-light;
-  text-shadow:
-    -1px 0 var(--stroke-color), 
-    0 1px var(--stroke-color), 
-    1px 0 var(--stroke-color), 
-    0 -1px var(--stroke-color);
+  text-shadow: -1px 0 var(--stroke-color), 0 1px var(--stroke-color),
+    1px 0 var(--stroke-color), 0 -1px var(--stroke-color);
   -webkit-text-stroke: 1px var(--stroke-color);
   mix-blend-mode: hard-light;
   opacity: 0.5;
   z-index: 1;
 }
 
-@supports(text-stroke: 1px var(--stroke-color)) or (--webkit-text-stroke: 1px var(--stroke-color)) {
+@supports (text-stroke: 1px var(--stroke-color)) or (--webkit-text-stroke: 1px var(--stroke-color)) {
   .card_label {
     -webkit-text-stroke: 1px var(--stroke-color);
     text-stroke: 1px var(--stroke-color);
     text-shadow: none;
   }
-} 
+}
 
 .article_description {
   padding: 25px;
@@ -194,11 +172,13 @@
 }
 
 .button {
-  font-family: var(--pressStart2P), sans-serif;
+  font-family: var(--accent-font), fantasy;
   background: var(--background-color);
   border: 2px solid #000000;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  position: relative;
+  min-inline-size: 130px;
 }
 
 .button:focus {
@@ -207,14 +187,14 @@
 }
 
 .button::before {
-  content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	height: 100%;
-	background: var(--color);
-	transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color);
+  transition: 0.5s ease-in-out;
 }
 
 .button:hover::before {
@@ -241,69 +221,76 @@
 }
 
 .card__like-button {
-  padding: 9px 35px;
+  /*padding: 9px 35px;*/
+  padding-block: 10px;
   align-self: end;
-  position: relative;
-}
-
-.core {
-  transition: fill 0.3s ease-out;
-}
-
-.main-body {
-  transition: fill 0.3s ease-out;
-  transition-delay: 0.05s;
 }
 
 .contour {
-  transition: fill 0.3s ease-out;
-  transition-delay: 0.06s;
+  fill: var(--heart-contour);
+  transition: fill 0.1s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
 .heart:hover .core {
   --heart-core: #000;
   fill: var(--heart-core);
+  transition: fill 0.3s linear;
 }
 
 .heart:hover .main-body {
   --heart-main-body: #000;
   fill: var(--heart-main-body);
+  transition: fill 0.3s linear 0.05s;
 }
 
-.heart:hover .contour {
+/*.heart:hover .contour {
   --heart-contour: #000;
   fill: var(--heart-contour);
-}
+}*/
 
 .heart:active .core {
   --heart-core: #f00;
   fill: var(--heart-core);
+  transition: fill 0.3s linear;
 }
 
 .heart:active .main-body {
   --heart-main-body: #f00;
   fill: var(--heart-main-body);
+  transition: fill 0.3s linear 0.05s;
 }
 
 .sparks {
   opacity: 0;
-  transition: opacity 0.3s ease-out;
-  transition-delay: 0.6s;
+  /*transition: opacity 0.3s ease-out;
+  transition-delay: 0.6s;*/
 }
 
 .like-icon.is-liked .core {
   --heart-core: #f00;
   fill: var(--heart-core);
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   --heart-main-body: #f00;
   fill: var(--heart-main-body);
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  opacity: 1;
   --heart-contour: #f00;
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .sparks {
@@ -318,8 +305,6 @@
 .open_dialog_button {
   width: max-content;
   padding: 15px;
-  transition: box-shadow 0.3s ease;
-  position: relative;
 }
 
 .open_dialog_button .disc_icon {
@@ -330,8 +315,6 @@
 .dialog_button {
   width: 100%;
   padding: 12.5px;
-  transition: box-shadow 0.3s ease;
-  position: relative;
 }
 
 .button__text {
@@ -344,20 +327,21 @@
 }
 
 .disc_icon {
- /* inline-size: 100%;
+  /* inline-size: 100%;
   block-size: 100%;*/
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .dialog {
   /*display: flex;сломал функционал кнопки*/
   padding: 30px;
   max-width: 355px;
-} 
+}
 
 .dialog::backdrop {
-  background-image: linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%);
-  opacity: 0.7;
+  background-color: var(--color);
+  opacity: 0.75;
 }
 
 .dialog_content {
@@ -367,30 +351,38 @@
 }
 
 .dialog_text {
-  font-family: var(--pressStart2P), sans-serif;
+  font-family: var(--accent-font), fantasy;
+  font-size: var(--button-font-size);
+  line-height: 1.5;
 }
 
-@media(width<=375px) {
+.dialog .disc_icon {
+  align-self: center;
+}
+
+@media (width<=375px) {
   .header {
     width: 100%;
+    padding-block: 120px;
   }
 
   .header_size {
     width: min(100%, 375px);
-   }
-   
+  }
+
   .main {
     width: 100%;
-   }
-   
-   .article {
+  }
+
+  .article {
     width: min(100%, 375px);
-   }
-   
+  }
+
   .open_dialog_button {
     /*width: fit-content;*/
     display: flex;
     flex-direction: column;
+    gap: 8px;
   }
 
   .disc_icon {
