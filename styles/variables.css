@@ -1,15 +1,15 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-	--main-font: 'Inter-Variable';
-	--accent-font: 'PressStart2P-Regular';
-	--title-weight: 700;
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P-Regular";
+  --text-weight: 400;
+  --title-weight: 700;
   --font-size: 18px;
   --button-font-size: 14px;
-	--text-weight: 400;
   --content-size: 375px, 100%, 700px;
   --color: #000;
-  --background-image: url('../images/background.png');
+  --background-image: url("../images/background.png");
   --background-color: #fff;
   --stroke-color: #fff;
   --button-text-color: #fff;
