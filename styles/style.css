@@ -66,7 +66,7 @@
 .main {
   display: grid;
   row-gap: 50px;
-  margin-block-end: 50px;
+  margin-block-end: 100px;
   justify-items: center;
 }
 
@@ -226,7 +226,7 @@
 
 .card__like-button {
   /*padding: 9px 35px;*/
-  padding-block: 10px;
+  padding-block: 8px;
   align-self: end;
 }
 
@@ -307,8 +307,12 @@
 }
 
 .open_dialog_button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
   width: max-content;
-  padding: 15px;
+  padding-block: 15px;
+  padding-inline: 20px;
 }
 
 .open_dialog_button .disc_icon {
@@ -318,7 +322,7 @@
 
 .dialog_button {
   width: 100%;
-  padding: 12.5px;
+  padding: 8px;
 }
 
 .button__text {
@@ -342,7 +346,7 @@
 .dialog {
   /*display: flex;*/
   padding: 30px;
-  max-width: 355px;
+  max-width: 353px;
 }
 
 .dialog::backdrop {
@@ -387,17 +391,20 @@
     width: min(100%, 375px);
   }
 
+  .card_label {
+    right: 13px;
+  }
+
   .open_dialog_button {
     /*width: fit-content;*/
-    display: flex;
     flex-direction: column;
-    gap: 8px;
+    /*gap: 8px;*/
   }
 
   .dialog {
     /*display: flex;сломал функционал кнопки*/
-    padding: 30px 42px;
-    max-width: 340px;
+    padding: 30px 40px;
+    max-width: 341px;
   }
 
   .disc_icon {
